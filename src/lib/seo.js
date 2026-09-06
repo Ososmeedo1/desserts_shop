@@ -1,6 +1,6 @@
 /**
  * Shared SEO helpers: canonical URLs and localized hreflang alternates.
- * Pure helpers, no I/O. Uses NEXT_PUBLIC_SITE_URL as the base origin.
+ * Pure helpers, no I/O. Uses SITE_URL as the base origin.
  */
 
 const LOCALES = ["ar", "en"];
@@ -27,7 +27,7 @@ function cleanPathPart(pathWithoutLocale) {
  *      }
  */
 export function seoAlternates(locale, pathWithoutLocale) {
-  const base = (process.env.NEXT_PUBLIC_SITE_URL || "").replace(/\/$/, "");
+  const base = (process.env.SITE_URL || "").replace(/\/$/, "");
   const suffix = cleanPathPart(pathWithoutLocale);
   const localeSlug = LOCALES.includes(locale) ? locale : LOCALES[0];
 
@@ -45,6 +45,6 @@ export function seoAlternates(locale, pathWithoutLocale) {
 
 /** Absolute URL for a site path, e.g. siteUrl("/sitemap.xml"). */
 export function siteUrl(path = "") {
-  const base = (process.env.NEXT_PUBLIC_SITE_URL || "").replace(/\/$/, "");
+  const base = (process.env.SITE_URL || "http://localhost:3000").replace(/\/$/, "");
   return `${base}${cleanPathPart(path)}`;
 }
