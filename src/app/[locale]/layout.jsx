@@ -33,9 +33,13 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }) {
   const { locale } = await params;
+  const settings = await getPublicSiteSettings(locale);
 
   return {
     metadataBase: new URL(siteUrl()),
+    ...(settings?.favicon?.url
+      ? {icons: {icon: settings.favicon.url}}
+      : {}),
   };
 }
 

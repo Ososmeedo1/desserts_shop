@@ -20,6 +20,7 @@ const DEFAULT_SETTINGS = {
   openingHours: {ar: "", en: ""},
   contactMessage: {ar: "", en: ""},
   mapEmbedUrl: "",
+  mapUrl: "",
   mapLatitude: null,
   mapLongitude: null,
 };
@@ -40,6 +41,7 @@ function toSettingsView(doc) {
     openingHours: doc.openingHours ?? {ar: "", en: ""},
     contactMessage: doc.contactMessage ?? {ar: "", en: ""},
     mapEmbedUrl: doc.mapEmbedUrl ?? "",
+    mapUrl: doc.mapUrl ?? "",
     mapLatitude: doc.mapLatitude ?? null,
     mapLongitude: doc.mapLongitude ?? null,
   };
@@ -86,6 +88,16 @@ export async function PUT(request) {
     }
 
     const data = parsed.data;
+
+    if (data.mapUrl === undefined) {
+      delete data.mapUrl;
+    }
+    if (data.mapLatitude === undefined) {
+      delete data.mapLatitude;
+    }
+    if (data.mapLongitude === undefined) {
+      delete data.mapLongitude;
+    }
 
     await connectDB();
 

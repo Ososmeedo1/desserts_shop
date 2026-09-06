@@ -26,8 +26,7 @@ const emptyValues = {
   address: {ar: "", en: ""},
   openingHours: {ar: "", en: ""},
   contactMessage: {ar: "", en: ""},
-  mapLatitude: "",
-  mapLongitude: "",
+  mapUrl: "",
 };
 
 export function SettingsForm({settings, locale}) {
@@ -72,8 +71,7 @@ export function SettingsForm({settings, locale}) {
         ar: settings.contactMessage?.ar ?? "",
         en: settings.contactMessage?.en ?? "",
       },
-      mapLatitude: settings.mapLatitude ?? "",
-      mapLongitude: settings.mapLongitude ?? "",
+      mapUrl: settings.mapUrl ?? "",
     };
   }, [settings]);
 
@@ -317,52 +315,25 @@ export function SettingsForm({settings, locale}) {
               </div>
             </div>
 
-            <div className="grid gap-4 lg:grid-cols-2">
-              <div className="space-y-2">
-                <Label htmlFor="mapLatitude">{t("labels.latitude")}</Label>
-                <Input
-                  id="mapLatitude"
-                  type="number"
-                  step="0.0001"
-                  dir="ltr"
-                  placeholder={t("placeholders.latitude")}
-                  aria-invalid={errors.mapLatitude ? "true" : undefined}
-                  aria-describedby={
-                    errors.mapLatitude ? "mapLatitude-error" : undefined
-                  }
-                  {...register("mapLatitude")}
-                />
-                {errors.mapLatitude ? (
-                  <p id="mapLatitude-error" className="text-sm text-error">
-                    {errors.mapLatitude.message}
-                  </p>
-                ) : null}
-              </div>
-
-              <div className="space-y-2">
-                <Label htmlFor="mapLongitude">{t("labels.longitude")}</Label>
-                <Input
-                  id="mapLongitude"
-                  type="number"
-                  step="0.0001"
-                  dir="ltr"
-                  placeholder={t("placeholders.longitude")}
-                  aria-invalid={errors.mapLongitude ? "true" : undefined}
-                  aria-describedby={
-                    errors.mapLongitude ? "mapLongitude-error" : undefined
-                  }
-                  {...register("mapLongitude")}
-                />
-                {errors.mapLongitude ? (
-                  <p id="mapLongitude-error" className="text-sm text-error">
-                    {errors.mapLongitude.message}
-                  </p>
-                ) : null}
-              </div>
+            <div className="space-y-2">
+              <Label htmlFor="mapUrl">{t("labels.locationLink")}</Label>
+              <Input
+                id="mapUrl"
+                dir="ltr"
+                placeholder={t("placeholders.locationLink")}
+                aria-invalid={errors.mapUrl ? "true" : undefined}
+                aria-describedby={errors.mapUrl ? "mapUrl-error" : undefined}
+                {...register("mapUrl")}
+              />
+              {errors.mapUrl ? (
+                <p id="mapUrl-error" className="text-sm text-error">
+                  {errors.mapUrl.message}
+                </p>
+              ) : null}
             </div>
 
             <p className="text-sm text-muted-foreground">
-              {t("coordinatesHint")}
+              {t("locationLinkHint")}
             </p>
           </div>
 

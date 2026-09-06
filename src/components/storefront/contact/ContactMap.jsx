@@ -19,12 +19,24 @@ export function buildGoogleMapsDirectionsUrl(latitude, longitude) {
   return `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}`;
 }
 
+export function resolveMapHref(settings) {
+  const mapUrl = settings?.mapUrl?.trim();
+  if (mapUrl && /^https:\/\//i.test(mapUrl)) {
+    return mapUrl;
+  }
+  if (
+    typeof settings?.mapLatitude === "number" &&
+    typeof settings?.mapLongitude === "number"
+  ) {
+    return buildGoogleMapsDirectionsUrl(settings.mapLatitude, settings.mapLongitude);
+  }
+  return buildGoogleMapsDirectionsUrl(DEFAULT_LATITUDE, DEFAULT_LONGITUDE);
+}
+
 export async function ContactMap({settings}) {
   const t = await getTranslations("contact.map");
 
-  const lat = toFixedCoordinate(settings?.mapLatitude, DEFAULT_LATITUDE);
-  const lng = toFixedCoordinate(settings?.mapLongitude, DEFAULT_LONGITUDE);
-  const href = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}`;
+  const href = resolveMapHref(settings);
 
   return (
     <section

@@ -13,7 +13,7 @@ const optionalString = z.string().trim();
 
 function optionalCoordinate(min, max, messages = SETTINGS_MESSAGES) {
   return z
-    .union([z.number(), z.string().trim(), z.null()])
+    .union([z.number(), z.string().trim(), z.null(), z.undefined()])
     .refine(
       (value) => {
         if (value === "" || value === null || value === undefined) {
@@ -29,7 +29,7 @@ function optionalCoordinate(min, max, messages = SETTINGS_MESSAGES) {
     )
     .transform((value) => {
       if (value === "" || value === null || value === undefined) {
-        return null;
+        return value;
       }
       return typeof value === "number" ? value : Number(value);
     });
@@ -77,7 +77,11 @@ export function settingsSchema(messages = SETTINGS_MESSAGES) {
       .union([z.string().trim(), z.null(), z.undefined()])
       .optional()
       .refine((value) => !value || /^https?:\/\//i.test(value), messages.invalidUrl),
-    mapLatitude: optionalCoordinate(-90, 90),
-    mapLongitude: optionalCoordinate(-180, 180),
+    mapUrl: z
+      .union([z.string().trim(), z.null(), z.undefined()])
+      .optional()
+      .refine((value) => !value || /^https?:\/\//i.test(value), messages.invalidUrl),
+    mapLatitude: optionalCoordinate(-90, 90).optional(),
+    mapLongitude: optionalCoordinate(-180, 180).optional(),
   });
 }

@@ -29,6 +29,7 @@ const siteSettingsSchema = new mongoose.Schema(
     openingHours: localizedString(),
     contactMessage: localizedString(),
     mapEmbedUrl: {type: String, trim: true},
+    mapUrl: {type: String, trim: true, default: ""},
     mapLatitude: {type: Number, default: null},
     mapLongitude: {type: Number, default: null},
   },

@@ -13,6 +13,7 @@ const EMPTY_SETTINGS = {
   openingHours: {ar: "", en: ""},
   contactMessage: {ar: "", en: ""},
   mapEmbedUrl: "",
+  mapUrl: "",
   mapLatitude: null,
   mapLongitude: null,
 };
@@ -39,6 +40,7 @@ export async function getAdminSettings() {
       openingHours: settings.openingHours ?? {ar: "", en: ""},
       contactMessage: settings.contactMessage ?? {ar: "", en: ""},
       mapEmbedUrl: settings.mapEmbedUrl ?? "",
+      mapUrl: settings.mapUrl ?? "",
       mapLatitude: settings.mapLatitude ?? null,
       mapLongitude: settings.mapLongitude ?? null,
     };

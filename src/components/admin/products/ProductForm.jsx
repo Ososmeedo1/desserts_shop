@@ -547,22 +547,27 @@ export function ProductForm({mode, product, categories, locale}) {
         : image
     );
 
-    const unitOptions = Array.isArray(data.measuringUnit?.options)
-      ? data.measuringUnit.options
-      : [];
-    const hasMeasuringUnit = unitOptions.length > 0;
-    data.hasMeasuringUnit = hasMeasuringUnit;
-    data.measuringUnit = {
-      unitType: hasMeasuringUnit
-        ? (data.measuringUnit?.unitType || undefined)
-        : undefined,
-      options: hasMeasuringUnit ? unitOptions : [],
-    };
-
     const endpoint =
       mode === "edit"
         ? `/api/admin/products/${product.id}`
         : "/api/admin/products";
+
+    if (mode === "create") {
+      data.hasMeasuringUnit = false;
+      data.measuringUnit = {unitType: undefined, options: []};
+    } else {
+      const unitOptions = Array.isArray(data.measuringUnit?.options)
+        ? data.measuringUnit.options
+        : [];
+      const hasMeasuringUnit = unitOptions.length > 0;
+      data.hasMeasuringUnit = hasMeasuringUnit;
+      data.measuringUnit = {
+        unitType: hasMeasuringUnit
+          ? (data.measuringUnit?.unitType || undefined)
+          : undefined,
+        options: hasMeasuringUnit ? unitOptions : [],
+      };
+    }
 
     try {
       const response = await fetch(endpoint, {
@@ -893,13 +898,15 @@ export function ProductForm({mode, product, categories, locale}) {
           </div>
 
           <div className="space-y-4 border-t border-border pt-8">
-            <h3 className={sectionTitle}>{t("sectionOptions")}</h3>
+            <h3 className={sectionTitle}>{mode === "edit" ? t("sectionOptions") : t("sectionOptionsCreate")}</h3>
 
-            <MeasuringUnitFields
-              control={control}
-              register={register}
-              errors={errors}
-            />
+            {mode === "edit" ? (
+              <MeasuringUnitFields
+                control={control}
+                register={register}
+                errors={errors}
+              />
+            ) : null}
 
             <AddOnFields control={control} register={register} errors={errors} />
           </div>

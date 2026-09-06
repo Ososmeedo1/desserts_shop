@@ -349,6 +349,7 @@ const SITE_SETTINGS = {
     en: "Hello, we are happy to hear from you.",
   },
   mapEmbedUrl: "",
+  mapUrl: "",
   mapLatitude: 30.0444,
   mapLongitude: 31.2357,
 };

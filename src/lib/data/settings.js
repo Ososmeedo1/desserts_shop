@@ -49,6 +49,7 @@ export const getPublicSiteSettings = cache(async function getPublicSiteSettings(
       openingHours: pickLocale(doc.openingHours, locale),
       contactMessage: pickLocale(doc.contactMessage, locale),
       mapEmbedUrl: doc.mapEmbedUrl || null,
+      mapUrl: doc.mapUrl || null,
       mapLatitude: typeof doc.mapLatitude === "number" ? doc.mapLatitude : null,
       mapLongitude: typeof doc.mapLongitude === "number" ? doc.mapLongitude : null,
     };
