@@ -1,0 +1,462 @@
+{
+  "common": {
+    "appName": "حلواني سُكّرية"
+  },
+  "home": {
+    "metadataTitle": "حلواني سُكّرية — حلويات مصرية مصنوعة يدوياً",
+    "metadataDescription": "اكتشف حلواني سُكّرية: كيك وحلويات مصنوعة يدوياً، تُخبز طازجة بحب وتصل إلى باب منزلك.",
+    "hero": {
+      "label": "حلويات طازجة، مصنوعة بحب",
+      "overline": "صُنعت بحب",
+      "title": "حلويات مصنوعة يدوياً، تُخبز طازجة بحب",
+      "subtitle": "أصناف حلوة ومالحة بأجود المكونات — اطلب مباشرة عبر واتساب واستمتع بطعم البيت.",
+      "ctaPrimary": "تصفّح منتجاتنا"
+    },
+    "categories": {
+      "title": "تصفّح حسب الفئة"
+    },
+    "featured": {
+      "title": "حلوياتنا المميزة",
+      "viewAll": "عرض كل المنتجات"
+    },
+    "brandStory": {
+      "title": "قصتنا",
+      "paragraph1": "بدأ حلواني سُكّرية في مطبخ صغير بحلم كبير: نشر دفء الحلويات المصرية الأصيلة في كل بيت. تُعدّ كل دفعة باليد باستخدام وصفات تُوّرت عبر الأجيال.",
+      "paragraph2": "من الأصناف التقليدية إلى لمسات عصرية، نخبز بأجود المكونات — زبدة حقيقية ومكسرات طازجة وكثير من المحبة. لأن أجمل اللحظات تستحق أحلى الحلويات.",
+      "illustrationLabel": "حلاوة أصيلة منذ اليوم الأول"
+    },
+    "whyChooseUs": {
+      "title": "لماذا تختارنا",
+      "fresh": {
+        "title": "مكونات طازجة",
+        "description": "نخبز كميات صغيرة يومياً باستخدام زبدة حقيقية ومكسرات فاخرة وفواكه موسمية."
+      },
+      "handcrafted": {
+        "title": "صناعة يدوية بعناية",
+        "description": "تُشكّل كل قطعة حلو وتُزيّن وتُنهى باليد — لا إنتاج آلي بالجملة أبداً."
+      },
+      "delivery": {
+        "title": "طلب سهل وسريع",
+        "description": "اطلب خلال دقيقة عبر واتساب واستلم حلوياتك وهي ما تزال طازجة."
+      }
+    },
+    "social": {
+      "title": "تابعنا"
+    },
+    "contactCta": {
+      "title": "اشتقت لحاجة حلوة؟",
+      "subtitle": "أرسل لنا رسالة على واتساب أو تواصل معنا — يسعدنا سماعك.",
+      "whatsappButton": "اطلب عبر واتساب",
+      "contactButton": "تواصل معنا"
+    }
+  },
+  "navigation": {
+    "home": "الرئيسية",
+    "products": "المنتجات",
+    "about": "من نحن",
+    "contact": "تواصل معنا",
+    "openMenu": "فتح القائمة",
+    "closeMenu": "إغلاق القائمة",
+    "skipToContent": "تخطَّ إلى المحتوى"
+  },
+  "lang": {
+    "label": "اللغة",
+    "switchTo": "التبديل إلى الإنجليزية",
+    "arabic": "العربية",
+    "english": "English"
+  },
+  "theme": {
+    "label": "تبديل الوضع الليلي"
+  },
+  "footer": {
+    "links": "روابط",
+    "contact": "تواصل معنا",
+    "followUs": "تابعنا",
+    "address": "العنوان",
+    "openingHours": "ساعات العمل",
+    "instagram": "انستغرام",
+    "facebook": "فيسبوك",
+    "madeBy": "صممه أسامة الجمل",
+    "rights": "© {year} {name}. جميع الحقوق محفوظة."
+  },
+  "storefront": {
+    "filters": {
+      "searchPlaceholder": "ابحث عن الحلويات...",
+      "allCategories": "كل الفئات",
+      "clearFilters": "مسح عوامل التصفية"
+    }
+  },
+  "products": {
+    "metadataTitle": "منتجاتنا — حلواني سُكّرية",
+    "metadataDescription": "تصفح حلواني سُكّرية: كيك وحلويات مصنوعة يدوياً، تُخبز طازجة بمحبة وتُوصل إلى باب منزلك.",
+    "title": "منتجاتنا",
+    "subtitle": "حلويات تُحضَّر يدوياً وتُخبز طازجة بمحبة.",
+    "emptyTitle": "لا توجد منتجات بعد",
+    "emptyDescription": "قائمتنا قيد التحضير. تفضَّل بالعودة قريباً.",
+    "unavailable": "غير متوفر حالياً",
+    "price": "{price} ج.م",
+    "fromPrice": "من {price} ج.م",
+    "pagination": {
+      "label": "ترقيم الصفحات",
+      "previous": "الصفحة السابقة",
+      "next": "الصفحة التالية",
+      "pageInfo": "الصفحة {page} من {totalPages}"
+    }
+  },
+  "productDetails": {
+    "breadcrumbs": "مسار التنقل",
+    "optionsTitle": "اختر خياراتك",
+    "addOnsLabel": "إضافات",
+    "total": "المجموع",
+    "cta": "اطلب عبر واتساب",
+    "relatedTitle": "قد يعجبك أيضاً",
+    "currency": "ج.م",
+    "greeting": "مرحبًا",
+    "orderPrefix": "أريد طلب:",
+    "sizeLabel": "المقاس:",
+    "extrasLabel": "إضافات:",
+    "totalLabel": "الإجمالي:",
+    "unitType": {
+      "weight": "اختر الوزن",
+      "pieces": "اختر النكهة",
+      "size": "اختر المقاس"
+    }
+  },
+  "categoryPage": {
+    "breadcrumbs": "مسار التنقل",
+    "breadcrumbHome": "الرئيسية",
+    "breadcrumbCategories": "الفئات",
+    "emptyTitle": "لا توجد منتجات في هذه الفئة بعد",
+    "emptyDescription": "نعمل على تجهيز هذه الفئة. تفضَّل بالعودة قريباً."
+  },
+  "about": {
+    "metadataTitle": "من نحن — حلواني سُكّرية",
+    "metadataDescription": "اكتشف قصة حلواني سُكّرية: حلويات مصرية مصنوعة يدوياً، تُخبز طازجة بعناية ومكونات فاخرة وكثير من المحبة.",
+    "hero": {
+      "title": "قصة الحلاوة خلف حلواني سُكّرية",
+      "subtitle": "محل عائلي بُني على الأصالة والجودة، وعلى متعة بسيطة هي مشاركة شيء لذيذ."
+    },
+    "content": {
+      "storyTitle": "قصتنا",
+      "storyParagraph1": "بدأ حلواني سُكّرية في مطبخ منزلي صغير بقناعة بسيطة: الحلويات الرائعة يجب أن يكون طعمها كأنها صُنعت لأجلك أنت. كل يوم نخلط ونُشكّل ونخبز بكميات صغيرة، باتباع وصفات توارثتها العائلة وتطورت عبر الأجيال.",
+      "storyParagraph2": "ما بدأ حلويات للجيران والمناسبات نما شيئاً فشيئاً ليصبح محلاً محبوباً — لكن طريقتنا لم تتغير أبداً. كل قطعة ما تزال تُنهى باليد، وتُخبز في صباح يوم بيعها، وتُعد بنفس الصبر الذي بدأت به أول دفعة.",
+      "philosophyTitle": "فلسفتنا",
+      "philosophyParagraph": "نؤمن أن الحلويات لغة من اللطف. سواء كان احتفالاً أو بعد ظهر هادئاً أو شكراً صغيراً، نُعدّ كل طلب ليكون دافئاً لا يُنسى بقدر اللحظة التي يرافقها.",
+      "qualityTitle": "التزامنا بالجودة",
+      "qualityParagraph": "الجودة ليست محل مساومة. نستخدم زبدة حقيقية ومكسرات فاخرة وفواكه موسمية وشيئاً واحداً فقط إضافياً: لا مواد صناعية. ونخبز يومياً بكميات صغيرة، ليصل إليك ما نصنعه دائماً طازجاً وعطِراً ومليئاً بالنكهة.",
+      "illustrationLabel": "من أيدينا إلى مائدتك"
+    },
+    "cta": {
+      "title": "ذوق الفرق بنفسك.",
+      "button": "تصفّح منتجاتنا"
+    }
+  },
+  "contact": {
+    "metadataTitle": "تواصل معنا — حلواني سُكّرية",
+    "metadataDescription": "تواصل مع حلواني سُكّرية هاتفياً أو عبر واتساب أو بزيارة المحل. يسعدنا سماعك.",
+    "message": "رسالة المحل",
+    "hero": {
+      "title": "فلنتحدث عن الحلويات",
+      "subtitle": "اطلب أو اسأل أو فقط ألقِ تحية — نحن على بُعد رسالة واحدة."
+    },
+    "info": {
+      "title": "معلومات التواصل",
+      "phone": "الهاتف",
+      "whatsapp": "واتساب",
+      "address": "العنوان",
+      "openingHours": "ساعات العمل",
+      "followUs": "تابعنا",
+      "unavailable": "معلومات التواصل غير متوفرة حالياً."
+    },
+    "map": {
+      "title": "موقعنا",
+      "getDirections": "احصل على الاتجاهات"
+    }
+  },
+  "admin": {
+    "metaTitle": "لوحة الإدارة — حلواني سُكّرية",
+    "panelTitle": "لوحة الإدارة",
+    "logout": "تسجيل الخروج",
+    "loginTitle": "تسجيل دخول المدير",
+    "loginDescription": "سجّل دخولك لإدارة متجرك.",
+    "registerTitle": "إنشاء حساب المدير",
+    "registerDescription": "إعداد لمرة واحدة لأول حساب مدير.",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "confirmPassword": "تأكيد كلمة المرور",
+    "setupToken": "رمز الإعداد",
+    "emailPlaceholder": "admin@example.com",
+    "passwordPlaceholder": "••••••••",
+    "confirmPasswordPlaceholder": "••••••••",
+    "setupTokenPlaceholder": "أدخل رمز الإعداد لمرة واحدة",
+    "loginButton": "تسجيل الدخول",
+    "registerButton": "إنشاء الحساب",
+    "loginError": "البريد الإلكتروني أو كلمة المرور غير صحيحة.",
+    "registerError": "فشل التسجيل. حاول مرة أخرى.",
+    "invalidToken": "رمز الإعداد غير صالح أو مفقود.",
+    "adminExists": "يوجد حساب مدير بالفعل. تم تعطيل التسجيل.",
+    "goToLogin": "مسجّل بالفعل؟ سجّل الدخول",
+    "goToRegister": "المرة الأولى هنا؟ أنشئ حسابك",
+    "validation": {
+      "required": "هذا الحقل مطلوب.",
+      "invalidEmail": "أدخل بريداً إلكترونياً صالحاً.",
+      "invalidToken": "يجب أن يكون رمز الإعداد 16 حرفاً على الأقل.",
+      "passwordMin": "يجب أن تكون كلمة المرور 8 أحرف على الأقل.",
+      "passwordsMismatch": "كلمتا المرور غير متطابقتين."
+    },
+    "toggleMenu": "تبديل قائمة التنقل",
+    "nav": {
+      "dashboard": "لوحة التحكم",
+      "categories": "الفئات",
+      "products": "المنتجات",
+      "settings": "الإعدادات"
+    },
+    "dashboard": {
+      "metaTitle": "لوحة التحكم — حلواني سُكّرية",
+      "welcomeTitle": "مرحباً بك في لوحة تحكم الإدارة",
+      "welcomeDescription": "أدر متجرك من هنا — الفئات والمنتجات والإعدادات.",
+      "totalCategories": "إجمالي الفئات",
+      "totalProducts": "إجمالي المنتجات"
+    },
+    "categories": {
+      "metaTitle": "الفئات — حلواني سُكّرية",
+      "title": "الفئات",
+      "description": "أدر فئات متجرك. يؤدي التعطيل إلى إخفائها من واجهة المتجر.",
+      "createNew": "إنشاء فئة",
+      "name": "الاسم",
+      "slug": "المعرف",
+      "status": "الحالة",
+      "active": "نشطة",
+      "inactive": "معطّلة",
+      "actions": "إجراءات",
+      "toggle": "تبديل التفعيل",
+      "delete": "حذف",
+      "edit": "تعديل",
+      "confirmDelete": "حذف هذه الفئة؟ لا يمكن التراجع عن هذا الإجراء.",
+      "deleteErrorHasProducts": "لا يمكن حذف فئة تحتوي على منتجات نشطة. انقل أو عطّل منتجاتها أولاً.",
+      "actionError": "حدث خطأ ما. حاول مرة أخرى.",
+      "emptyTitle": "لا توجد فئات بعد",
+      "emptyDescription": "أنشئ فئتك الأولى لتبدأ تنظيم منتجاتك."
+    },
+    "categoryForm": {
+      "createTitle": "إنشاء فئة",
+      "editTitle": "تعديل الفئة",
+      "sectionBasic": "البيانات الأساسية",
+      "sectionImage": "الصورة",
+      "sectionSettings": "الإعدادات",
+      "labels": {
+        "nameAr": "الاسم (بالعربية)",
+        "nameEn": "الاسم (بالإنجليزية)",
+        "slug": "المعرف (Slug)",
+        "descriptionAr": "الوصف (بالعربية)",
+        "descriptionEn": "الوصف (بالإنجليزية)",
+        "imageUrl": "رابط الصورة",
+        "isActive": "نشطة",
+        "sortOrder": "ترتيب الفرز"
+      },
+      "placeholders": {
+        "nameAr": "مثال: كيك العسل",
+        "nameEn": "مثال: Honey Cake",
+        "slug": "honey-cake",
+        "descriptionAr": "وصف قصير بالعربية…",
+        "descriptionEn": "وصف قصير بالإنجليزية…",
+        "imageUrl": "https://ik.imagekit.io/yourkit/category.jpg"
+      },
+      "submitCreate": "إنشاء الفئة",
+      "submitUpdate": "حفظ التغييرات",
+      "cancel": "إلغاء",
+      "successCreate": "تم إنشاء الفئة بنجاح.",
+      "successUpdate": "تم تحديث الفئة بنجاح.",
+      "errorSlugExists": "توجد فئة بهذا المعرف بالفعل.",
+      "errorNotFound": "لم يتم العثور على الفئة.",
+      "errorGeneric": "حدث خطأ ما. حاول مرة أخرى.",
+      "imageAltFallback": "صورة الفئة",
+      "validation": {
+        "required": "هذا الحقل مطلوب.",
+        "invalidSlug": "استخدم أحرفاً لاتينية صغيرة وأرقاماً وشرطات فقط.",
+        "invalidUrl": "أدخل رابطاً صالحاً يبدأ بـ http:// أو https://.",
+        "minZero": "يجب أن تكون القيمة صفراً أو أكثر."
+      }
+    },
+    "products": {
+      "metaTitle": "المنتجات — حلواني سُكّرية",
+      "title": "المنتجات",
+      "description": "أدر منتجات متجرك ومجموعات الخيارات الخاصة بها.",
+      "createNew": "إنشاء منتج",
+      "searchPlaceholder": "ابحث بالاسم…",
+      "filterCategory": "الفئة",
+      "allCategories": "كل الفئات",
+      "clearFilters": "مسح عوامل التصفية",
+      "emptyTitle": "لا توجد منتجات",
+      "emptyDescription": "عدّل البحث أو عوامل التصفية، أو أنشئ منتجاً جديداً.",
+      "columns": {
+        "image": "الصورة",
+        "name": "الاسم",
+        "category": "الفئة",
+        "price": "السعر",
+        "status": "الحالة",
+        "actions": "إجراءات"
+      },
+      "active": "نشط",
+      "inactive": "معطّل",
+      "available": "متوفر",
+      "soldOut": "نفد الكمية",
+      "featured": "مميز",
+      "toggleActive": "تبديل التفعيل",
+      "toggleFeatured": "تبديل التمييز",
+      "edit": "تعديل",
+      "delete": "حذف",
+      "confirmDelete": "حذف هذا المنتج؟ لا يمكن التراجع عن هذا الإجراء.",
+      "actionError": "حدث خطأ ما. حاول مرة أخرى.",
+      "currency": "ج.م",
+      "pagination": {
+        "label": "ترقيم الصفحات",
+        "previous": "الصفحة السابقة",
+        "next": "الصفحة التالية",
+        "pageInfo": "الصفحة {page} من {totalPages}"
+      }
+    },
+    "productForm": {
+      "createTitle": "إنشاء منتج",
+      "editTitle": "تعديل المنتج",
+      "sectionBasic": "البيانات الأساسية",
+      "sectionPricing": "السعر والحالة",
+      "sectionImages": "الصور",
+      "sectionOptions": "وحدة القياس والإضافات",
+      "labels": {
+        "nameAr": "الاسم (بالعربية)",
+        "nameEn": "الاسم (بالإنجليزية)",
+        "slug": "المعرف (Slug)",
+        "descriptionAr": "الوصف (بالعربية)",
+        "descriptionEn": "الوصف (بالإنجليزية)",
+        "category": "الفئة",
+        "unitLabelAr": "وحدة القياس (بالعربية)",
+        "unitLabelEn": "وحدة القياس (بالإنجليزية)",
+        "price": "السعر الأساسي",
+        "oldPrice": "السعر القديم",
+        "isActive": "نشط",
+        "isAvailable": "متوفر",
+        "isFeatured": "مميز",
+        "sortOrder": "ترتيب الفرز",
+        "imageUrl": "رابط الصورة",
+        "isPrimary": "الصورة الرئيسية",
+        "required": "إجباري",
+        "measuringUnit": "وحدة القياس",
+        "selectUnitType": "اختر نوع وحدة القياس",
+        "unitType": "نوع الوحدة",
+        "unitTypeWeight": "وزن",
+        "unitTypePieces": "قطع",
+        "unitTypeSize": "مقاس",
+        "unitOptionNameAr": "اسم خيار الوحدة (بالعربية)",
+        "unitOptionNameEn": "اسم خيار الوحدة (بالإنجليزية)",
+        "unitOptionPrice": "سعر خيار الوحدة",
+        "unitOptionActive": "نشط",
+        "addOnSection": "الإضافات",
+        "addOnNameAr": "اسم الإضافة (بالعربية)",
+        "addOnNameEn": "اسم الإضافة (بالإنجليزية)",
+        "addOnPrice": "سعر الإضافة",
+        "addOnActive": "نشطة"
+      },
+      "placeholders": {
+        "nameAr": "مثال: كيك العسل",
+        "nameEn": "مثال: Honey Cake",
+        "slug": "honey-cake",
+        "descriptionAr": "وصف قصير بالعربية…",
+        "descriptionEn": "وصف قصير بالإنجليزية…",
+        "categorySelect": "اختر فئة",
+        "unitLabelAr": "مثال: كيلو",
+        "unitLabelEn": "مثال: kg",
+        "imageUrl": "https://ik.imagekit.io/yourkit/product.jpg",
+        "unitOptionNameAr": "مثال: وسط",
+        "unitOptionNameEn": "مثال: Medium",
+        "addOnNameAr": "مثال: مكسرات إضافية",
+        "addOnNameEn": "مثال: Extra nuts"
+      },
+      "addImage": "إضافة صورة",
+      "removeImage": "إزالة الصورة",
+      "addUnitOption": "إضافة خيار",
+      "removeUnitOption": "إزالة الخيار",
+      "addAddOn": "إضافة إضافة",
+      "removeAddOn": "إزالة الإضافة",
+      "measuringUnitHint": "اتركه فارغاً إذا كان المنتج يُباع بالسعر الأساسي دون اختيار إلزامي.",
+      "noUnitsHint": "لا توجد إضافات بعد. يُباع هذا المنتج دون إضافات.",
+      "unitTypeHint": "يحدد طريقة عرض الاختيار للعملاء (وزن، قطع، أو مقاس).",
+      "submitCreate": "إنشاء المنتج",
+      "submitUpdate": "حفظ التغييرات",
+      "cancel": "إلغاء",
+      "successCreate": "تم إنشاء المنتج بنجاح.",
+      "successUpdate": "تم تحديث المنتج بنجاح.",
+      "errorSlugExists": "يوجد منتج بهذا المعرف بالفعل.",
+      "errorNotFound": "لم يتم العثور على المنتج.",
+      "errorGeneric": "حدث خطأ ما. حاول مرة أخرى.",
+      "imageAltFallback": "صورة المنتج",
+      "validation": {
+        "required": "هذا الحقل مطلوب.",
+        "invalidSlug": "استخدم أحرفاً لاتينية صغيرة وأرقاماً وشرطات فقط.",
+        "invalidCategory": "اختر فئة صالحة.",
+        "minZero": "يجب أن تكون القيمة صفراً أو أكثر.",
+        "unitTypeRequired": "اختر نوع وحدة القياس."
+      }
+    },
+    "settings": {
+      "pageTitle": "إعدادات الموقع"
+    },
+    "settingsForm": {
+      "sectionBrand": "الهوية التجارية",
+      "sectionContact": "التواصل الاجتماعي",
+      "sectionLocation": "الموقع والساعات",
+      "sectionMessages": "الرسائل",
+      "labels": {
+        "brandNameAr": "اسم العلامة التجارية (بالعربية)",
+        "brandNameEn": "اسم العلامة التجارية (بالإنجليزية)",
+        "phone": "الهاتف",
+        "whatsapp": "واتساب",
+        "instagram": "انستغرام",
+        "facebook": "فيسبوك",
+        "addressAr": "العنوان (بالعربية)",
+        "addressEn": "العنوان (بالإنجليزية)",
+        "openingHoursAr": "ساعات العمل (بالعربية)",
+        "openingHoursEn": "ساعات العمل (بالإنجليزية)",
+        "latitude": "خط العرض",
+        "longitude": "خط الطول",
+        "contactMessageAr": "رسالة التواصل (بالعربية)",
+        "contactMessageEn": "رسالة التواصل (بالإنجليزية)"
+      },
+      "placeholders": {
+        "brandNameAr": "مثال: سوكارية للحلويات",
+        "brandNameEn": "e.g. Sokkariya Sweets",
+        "phone": "+123 456 7890",
+        "whatsapp": "+123 456 7890",
+        "instagram": "https://instagram.com/youraccount",
+        "facebook": "https://facebook.com/youraccount",
+        "addressAr": "شارع التحلية، الرياض",
+        "addressEn": "123 Tahlia St, Riyadh",
+        "openingHoursAr": "السبت - الخميس: 9 صباحاً - 11 مساءً",
+        "openingHoursEn": "Sat–Thu: 9 AM – 11 PM",
+        "latitude": "مثال: 30.0444",
+        "longitude": "مثال: 31.2357",
+        "contactMessageAr": "رسالة ترحيبية للزبائن",
+        "contactMessageEn": "A welcome message for customers"
+      },
+      "coordinatesHint": "احصل على الإحداثيات من خرائط جوجل أو openstreetmap.org (انقر بزر الماوس الأيمن على الموقع).",
+      "submit": "حفظ الإعدادات",
+      "successUpdate": "تم حفظ الإعدادات بنجاح.",
+      "errorGeneric": "حدث خطأ ما. حاول مرة أخرى.",
+      "logoAltFallback": "شعار الموقع",
+      "faviconAltFallback": "أيقونة الموقع",
+      "validation": {
+        "invalidUrl": "أدخل رابطاً صالحاً يبدأ بـ http:// أو https://.",
+        "invalidCoordinate": "أدخل إحداثية صالحة ضمن النطاق المسموح."
+      }
+    },
+    "imageUpload": {
+      "uploadPrompt": "انقر للرفع أو اسحب الصورة وأفلتها هنا",
+      "uploading": "جارٍ الرفع…",
+      "remove": "إزالة الصورة",
+      "replace": "استبدال الصورة",
+      "errorInvalidType": "يُسمح بملفات الصور فقط",
+      "errorTooLarge": "يجب ألا يتجاوز حجم الملف 5 ميجابايت",
+      "errorUploadFailed": "فشل رفع الصورة"
+    }
+  }
+}

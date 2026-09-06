@@ -1,0 +1,899 @@
+# Sweet Shop Catalog Website — Project Specification
+
+## 1. Project Purpose
+
+Build a full-stack bilingual sweet-shop catalog website.
+
+This is a catalog website, not a traditional e-commerce store.
+
+Customers can:
+
+- browse sweets
+- browse categories
+- view product details
+- contact/order through external channels such as WhatsApp, phone, or social links
+
+The project must NOT include:
+
+- cart
+- checkout
+- online payment
+- customer accounts
+- internal order system
+- delivery management
+
+Admin controls all catalog content.
+
+---
+
+## 2. Current Project Phase
+
+This project is being built with fake/demo data first.
+
+It may later be offered to a real customer.
+
+Therefore:
+
+- all contact details, images, logo, favicon, and brand identity are fake placeholders for now
+- admin must be able to replace them later
+- do not invent real business contact details
+- do not invent ingredients or product facts
+- product names, prices, and meanings must be preserved
+
+No demo-data notice is required.
+
+---
+
+## 3. Fake Brand Identity
+
+Use the following temporary fake brand identity:
+
+- Arabic brand name: حلواني سُكّرية
+- English brand name: Sokkariya Sweets
+
+Logo:
+
+- fake placeholder logo
+- simple sweet-shop/candy/cupcake-style visual identity
+- created as local SVG or simple static asset
+
+Favicon:
+
+- fake placeholder favicon
+- compatible with the sweet-shop idea
+- created as local SVG or simple static asset
+
+Admin must later be able to update brand name, logo, and favicon through Site Settings.
+
+---
+
+## 4. Languages and Localization
+
+The website supports two languages:
+
+- Arabic
+- English
+
+Arabic is the default language.
+
+Requirements:
+
+- full RTL support for Arabic
+- full LTR support for English
+- language switcher
+- language preference persisted
+- root path `/` redirects to `/ar`
+- all customer-facing UI must support both languages
+- admin dashboard must support both languages
+- admin default language is Arabic
+- no hardcoded UI strings inside components
+- validation messages must support both languages
+- error states must support both languages
+- loading states must support both languages
+- empty states must support both languages
+- buttons and navigation must support both languages
+- product names/descriptions support Arabic and English
+- category names support Arabic and English
+- image alt text supports Arabic and English
+- SEO supports both languages
+- layout must correctly mirror between RTL and LTR
+
+Preferred public route structure:
+
+```txt
+/ar
+/en
+
+/ar/products
+/en/products
+
+/ar/categories/[slug]
+/en/categories/[slug]
+
+/ar/products/[slug]
+/en/products/[slug]
+
+/ar/about
+/en/about
+
+/ar/contact
+/en/contact
+
+Admin routes should also be localized:
+
+/ar/admin
+/en/admin
+
+/ar/admin/login
+/en/admin/login
+
+/ar/admin/register
+/en/admin/register
+
+/ar/admin/categories
+/en/admin/categories
+
+/ar/admin/products
+/en/admin/products
+
+/ar/admin/settings
+/en/admin/settings
+
+5. Tech Stack
+Use:
+Next.js
+App Router
+JavaScript only
+NO TypeScript
+Tailwind CSS
+MongoDB
+MongoDB Atlas
+Mongoose
+ImageKit
+next-intl
+Auth.js
+Zod
+React Hook Form
+Lucide React
+Sonner
+Vercel for deployment
+Allowed additional libraries only where technically necessary:
+bcryptjs for password hashing
+@hookform/resolvers for React Hook Form + Zod integration
+Do not introduce additional libraries unless there is a clear technical reason.
+
+6. Forbidden Technical Directions
+Do NOT introduce:
+TypeScript
+Redux unless truly necessary
+GraphQL
+microservices
+unnecessary state-management libraries
+unnecessary backend frameworks
+excessive abstraction
+unnecessary Docker setup
+complex architecture for its own sake
+cart
+checkout
+payment
+customer model
+delivery model
+Prefer simple, maintainable Next.js architecture.
+
+7. Package Manager
+Use:
+npm
+
+8. Environment Variables
+Use .env.example with placeholders only.
+Required environment variables:
+
+MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/sweet-shop
+
+NEXT_PUBLIC_SITE_URL=http://localhost:3000
+
+AUTH_SECRET=replace-with-strong-random-secret
+AUTH_URL=http://localhost:3000
+
+IMAGEKIT_PUBLIC_KEY=replace-with-imagekit-public-key
+IMAGEKIT_PRIVATE_KEY=replace-with-imagekit-private-key
+IMAGEKIT_ENDPOINT=https://ik.imagekit.io/your_imagekit_id
+
+ADMIN_SETUP_TOKEN=replace-with-one-time-setup-token
+
+Rules:
+never expose secrets to the browser
+never hardcode secrets
+never commit real secrets
+ImageKit private key must remain server-side only
+
+9. Database
+Use MongoDB with Mongoose.
+Models:
+Admin
+Category
+Product
+SiteSettings
+Do NOT create:
+Cart
+Order
+Payment
+Customer
+Delivery
+Products and categories must live in the database.
+Do NOT hardcode catalog products into frontend components.
+
+10. Admin Model
+Admin fields:
+email
+passwordHash
+createdAt
+updatedAt
+Rules:
+one admin only initially
+no roles
+no public registration
+one-time setup/registration only
+passwords must never be stored plaintext
+use secure password hashing
+minimum password length: 8 characters
+password confirmation required during setup
+
+11. One-Time Admin Registration
+Admin registration must be one-time only.
+Recommended secure behavior:
+registration page exists at /[locale]/admin/register
+registration is available only when:
+no admin exists in the database
+the correct ADMIN_SETUP_TOKEN is provided
+after the first admin is created:
+registration is permanently disabled
+the registration route should return 404 or redirect to login
+Registration fields:
+setup token
+email
+password
+password confirmation
+
+12. Category Model
+Category fields:
+name: Arabic and English
+slug: unique Latin/English slug
+description: Arabic and English
+image:
+url
+fileId
+alt Arabic
+alt English
+isActive
+sortOrder
+createdAt
+updatedAt
+Category rules:
+categories must be database-driven
+admin can create, edit, delete, activate/deactivate, reorder, and manage category images
+each product belongs to one category initially
+
+13. Product Model
+Product fields:
+name: Arabic and English
+slug: unique Latin/English slug
+description: Arabic and English
+category
+price
+optional old price
+unit/size label
+availability
+featured status
+sort order
+multiple images
+createdAt
+updatedAt
+Product image fields:
+url
+fileId
+alt Arabic
+alt English
+isPrimary
+sortOrder
+Product rules:
+products must be database-driven
+admin can create, edit, delete, activate/deactivate, feature/unfeature, reorder, assign category, manage options, and manage images
+products may be simple products
+products may optionally have variants/options
+do not force variants onto every product
+
+14. Product Options/Variants Architecture
+Products can have option groups.
+Option group fields:
+name: Arabic and English
+type: variant or addon
+required: boolean
+options list
+Option fields:
+name: Arabic and English
+price
+priceType: absolute or delta
+isActive
+sortOrder
+Pricing rules:
+simple products use the main product price
+variant options use absolute prices
+add-ons use delta prices
+example variant option:
+Size 18 = 230 EGP
+example add-on:
+Extra nuts = +50 EGP
+Product cards may show:
+English: From X EGP
+Arabic: من X ج.م
+Product pages should update the displayed price when options are selected.
+
+15. Currency Display
+Use:
+English: EGP
+Arabic: ج.م
+Examples:
+English: 230 EGP
+Arabic: 230 ج.م
+
+16. Initial Categories
+These are seed categories, not hardcoded permanent categories.
+Admin must later be able to rename, delete, reorder, activate, deactivate, or create categories.
+Initial categories:
+Arabic: هاني كيك
+English: Honey Cake
+Slug: honey-cake
+Arabic: سينابون
+English: Cinnamon Rolls
+Slug: cinnamon-rolls
+Arabic: بسكويت وتارت
+English: Cookies & Tart
+Slug: cookies-and-tart
+Arabic: بريفيترول
+English: Profiterole
+Slug: profiterole
+Arabic: كوكيز
+English: Cookies
+Slug: cookies
+Arabic: كب كيك
+English: Cupcakes
+Slug: cupcakes
+Arabic: تيراميسو
+English: Tiramisu
+Slug: tiramisu
+Arabic: تشيز كيك
+English: Cheesecake
+Slug: cheesecake
+Arabic: طواجن
+English: Tagines
+Slug: tagines
+Use English Latin slugs even for Arabic pages.
+
+17. Seed Catalog Normalization Rules
+General rules:
+preserve original meaning and prices
+do not invent ingredients, sizes, or product information
+normalize obvious spelling/formatting only when meaning is clear
+product descriptions may be generated from product names in Arabic and English
+descriptions must remain neutral and must not invent ingredients
+English product names should be direct translations based on Arabic names
+sizes/flavors are selectable options where grouping is appropriate
+each option can have a different price
+add-ons are not standalone products unless explicitly required
+
+18. Seed Product Grouping Decisions
+Category: هاني كيك
+Product: تورته هاني كيك
+One product with selectable options.
+Options:
+تورته هاني كيك كلاسيك مقاس 18 — 230 EGP
+تورته هاني كيك كلاسيك مقاس 24 — 320 EGP
+تورته هاني كيك مقاس 18 كراميل وعين جمل — 470 EGP
+تورته هاني كيك مقاس 24 كراميل وعين جمل — 630 EGP
+تورته هاني كيك مانجا مقاس 18 — 450 EGP
+تورته هاني كيك مانجا مقاس 24 — 650 EGP
+تورته هاني كيك مقاس 18 — 450 EGP
+Important:
+The two following items are both preserved as separate options:
+تورته هاني كيك كلاسيك مقاس 18 — 230 EGP
+تورته هاني كيك مقاس 18 — 450 EGP
+No data should be deleted or guessed.
+Product: قطعة هاني كيك
+One product with selectable options.
+Options:
+قطعه هاني كيك نوتيلا وبندق — 70 EGP
+قطعه هاني كيك كراميل وعين جمل — 70 EGP
+قطعه هاني كيك كلاسيك — 50 EGP
+Category: سينابون
+Product: سينابون
+One product with selectable flavor options.
+Options:
+سينابون لوتس — 95 EGP
+سينابون كراميل — 95 EGP
+سينابون النوتيلا — 95 EGP
+سينابون كندر — 95 EGP
+سينابون وايت شوكليت — 95 EGP
+سينابون كلاسيك — 90 EGP
+سينابون بستاشيو — 100 EGP
+سينابون بلوبيري — 100 EGP
+Add-on:
+إضافة مكسرات على السينابون — +50 EGP
+This add-on is a product option/add-on for سينابون products.
+It is not a standalone product.
+Category: بسكويت وتارت
+Separate products:
+نص كيلو بسكويت زبده — 300 EGP
+نص كيلو ميني تارت — 425 EGP
+شومسيو بالبلجيان شوكليت — 90 EGP
+For demo purposes, assign شومسيو بالبلجيان شوكليت to this category unless changed later by admin.
+Category: بريفيترول
+Product: بريفيترول
+One product with selectable flavor options.
+Options:
+بريفيترو وايت شوكليت بلوبيري — 75 EGP
+بريفيترو لوتس — 75 EGP
+بريفيترو نوتيلا — 75 EGP
+بريفيترو بستاشيو — 80 EGP
+بريفيترو كندر — 75 EGP
+Normalize obvious spelling to:
+بريفيترو
+Category: كوكيز
+Product: كوكيز
+One product with selectable options.
+Options:
+قطعه كوكيز ميكس وشوكليت — 100 EGP
+قطعه كوكيز ميكس بيلجن شوكليت — 90 EGP
+قطعه كوكيز ميكس شوكليت كيندر — 100 EGP
+Also assign the following product to this category for demo purposes unless changed later by admin:
+علبه جوزيه ست قطع ميكس — 100 EGP
+Category: كب كيك
+Product: كب كيك ماتيلدا
+One product with selectable flavor options.
+Options:
+كنافة وبستاشيو — 95 EGP
+نوتيلا وبندق — 95 EGP
+كندر — 95 EGP
+Category: تيراميسو
+Product: تيراميسو بالمانجا
+Options:
+كب تيراميسو بالمانجا — 95 EGP
+تيراميسو بالمانجا مقاس 15×15، يكفي 3 أفراد — 370 EGP
+Product: تيراميسو كوفي
+Options:
+تيراميسو كوفي كب — 90 EGP
+تيراميسو كوفي 15×15، يكفي 3 أفراد — 290 EGP
+Category: تشيز كيك
+Product: تشيز كيك
+One product with selectable flavor options.
+Options:
+تشيز كيك مانجا — 90 EGP
+تشيز كيك بلوبيري — 95 EGP
+تشيز كيك بستاشيو — 95 EGP
+تشيز كيك كندر — 85 EGP
+تشيز كيك لوتس — 85 EGP
+تشيز كيك نوتيلا — 85 EGP
+Category: طواجن
+Separate products:
+طاجن نوتيلا كونو — 80 EGP
+طاجن كيندر بوينو — 85 EGP
+طاجن نوتيلا كراميل وعين جمل — 80 EGP
+طاجن اكسترا نوتيلا وبندق — 85 EGP
+طاجن لوتس بعين الجمل — 80 EGP
+طاجن نوتيلا بوريو — 80 EGP
+Product: طاجن ميكس
+Options:
+طاجن ميكس وسط، يكفي 4 أفراد — 270 EGP
+طاجن ميكس عائلي، يكفي 6 أفراد — 320 EGP
+
+19. Featured Products
+Initial featured products should include one or two products from each main category.
+Homepage “Popular/Best Products” section should use featured products or manually seeded products until analytics/order signals exist.
+
+20. Product Availability
+Initially:
+all seed products are active
+all seed products are available
+Admin must later be able to change:
+active/inactive
+available/sold out
+featured/not featured
+sort order
+
+21. Images
+Use fake placeholder images during development.
+Rules:
+fake images should be created according to product/category name where practical
+simple local placeholder assets are acceptable
+placeholders can be SVG or simple generated static images
+placeholders should use warm sweet-shop colors
+admin must later be able to replace images through ImageKit
+seed images do not need real ImageKit file IDs initially
+once admin uploads real images, ImageKit file ID and URL should be stored
+Image management requirements:
+upload images
+replace images
+delete images
+reorder images
+set primary image
+add Arabic alt text
+add English alt text
+ImageKit rules:
+never expose ImageKit private credentials to the browser
+use secure upload architecture
+use server-side ImageKit operations where private keys are required
+use Next.js image optimization appropriately with ImageKit
+
+22. Image Alt Text
+Generate simple bilingual alt text from product/category names.
+Example Arabic alt:
+تورته هاني كيك كلاسيك
+Example English alt:
+Classic Honey Cake Torta
+Admin can edit alt text later.
+
+23. Contact Channels
+Contact/order channels are external.
+Primary channel:
+WhatsApp
+Secondary channels:
+phone
+Instagram
+Facebook
+location/map
+Use fake placeholder contact values for now.
+Recommended placeholder values:
+Phone: +20 100 000 0000
+WhatsApp: +20 100 000 0000
+Instagram: https://instagram.com/example.sweets
+Facebook: https://facebook.com/example.sweets
+Address: Cairo, Egypt — Demo Address
+Opening Hours: Daily 10:00 AM – 11:00 PM
+Admin must be able to control all contact values later through Site Settings.
+
+24. WhatsApp CTA
+Product pages must show a prominent WhatsApp CTA.
+The CTA should open WhatsApp with a prefilled message.
+The message should be based on the current language.
+It should include:
+product name
+selected options, when applicable
+Example Arabic:
+مرحبًا، أريد طلب: تورته هاني كيك
+Example English:
+Hello, I would like to order: Honey Cake Torta
+If options are selected, include them in the message.
+
+25. Map
+Use a map embed on the Contact page.
+For now:
+use a generic placeholder map, for example Cairo, Egypt
+make it easy to replace later through settings or admin
+Do not invent a real business location.
+
+26. Site Settings
+Admin should be able to control:
+brand name Arabic
+brand name English
+logo
+favicon
+phone
+WhatsApp
+Instagram
+Facebook
+address Arabic
+address English
+opening hours Arabic
+opening hours English
+social links
+contact message Arabic
+contact message English
+map embed URL
+All appropriate text fields should support Arabic and English.
+
+27. Storefront Pages
+Required pages:
+Home
+Products
+Category
+Product Details
+About
+Contact
+Homepage structure:
+Hero
+Featured sweets
+Categories
+Popular/best products
+Brand story
+Why choose us
+Social section
+Contact CTA
+Footer
+Product page should show:
+image gallery
+product name
+price
+description
+variants/options when applicable
+add-ons when applicable
+availability
+external WhatsApp/contact CTA
+related products
+No internal checkout.
+No cart.
+
+28. About and Contact Placeholder Content
+Use placeholder content for:
+About page
+brand story
+Why choose us
+Contact page intro
+opening hours
+address
+Do not invent factual business details.
+Placeholder text should be neutral and easy to replace later.
+
+29. Search
+Implement product search.
+Search should support Arabic and English.
+Initial search should be simple and maintainable.
+Search should match:
+product Arabic name
+product English name
+product Arabic description
+product English description
+category Arabic name
+category English name
+Example:
+Searching for:
+سينابون
+should find cinnamon products.
+Do not over-engineer search initially.
+Architecture should allow future normalization/fuzzy matching improvements.
+
+30. Admin Dashboard Requirements
+Admin dashboard must provide CRUD for:
+categories
+products
+site settings
+Categories admin features:
+create
+edit
+delete
+activate/deactivate
+reorder
+image management
+Products admin features:
+create
+edit
+delete
+activate/deactivate
+featured/unfeatured
+reorder
+category assignment
+variants/options
+image management
+product search
+category filtering
+availability filtering
+delete confirmation
+useful success/error feedback
+loading states
+empty states
+Admin protection rules:
+authentication required
+protected routes
+server-side authorization
+no client-only protection
+passwords must never be stored plaintext
+never trust client input
+
+31. Design System
+Primary design direction:
+Soft Claymorphism + Warm Minimalism
+Brand color:
+#f9b2c0
+Use it as primary brand/accent color.
+Do NOT make the entire interface pink.
+Recommended visual language:
+cream/off-white backgrounds
+dark chocolate text
+caramel accents
+chocolate accents
+strawberry accents
+pistachio accents
+soft shadows
+subtle depth
+rounded corners 16–24px
+spacious layouts
+large appetizing product presentation
+playful but premium typography
+smooth hover/transition effects
+strong CTA buttons
+mobile-first responsive design
+Website should feel like:
+premium modern Egyptian sweet shop
+warm
+appetizing
+modern
+trustworthy
+playful
+It should NOT feel like:
+generic SaaS
+generic e-commerce
+childish
+overly luxurious
+
+32. Dark Mode
+Support both light and dark modes.
+Do NOT simply invert colors.
+Define proper design tokens for:
+background
+surface
+text
+muted text
+primary
+secondary
+borders
+shadows
+success
+warning
+error
+Dark mode should feel warm and chocolate-based.
+Maintain accessible contrast.
+Default theme behavior:
+follow system preference
+allow manual toggle
+persist user preference
+
+33. Typography
+Use:
+Arabic:
+Cairo
+English:
+Plus Jakarta Sans
+Recommended weights:
+400 body
+500 labels
+600 buttons
+700 headings
+800 hero headings
+If technical constraints require another font, explain why before changing.
+
+34. Reusable UI
+Build reusable components where useful.
+Examples:
+Button
+Input
+Select
+Modal
+Drawer
+Card
+ProductCard
+CategoryCard
+Badge
+Navbar
+Footer
+Breadcrumb
+Toast
+Skeleton
+EmptyState
+LoadingState
+Do not create components merely to increase component count.
+Use sensible component boundaries.
+
+35. SEO
+Implement:
+metadata
+dynamic product metadata
+category metadata
+sitemap
+robots.txt
+Open Graph
+canonical URLs
+hreflang
+Arabic/English metadata
+product structured data
+semantic HTML
+SEO-friendly slugs
+Use NEXT_PUBLIC_SITE_URL for canonical URLs.
+For local development:
+http://localhost:3000
+For Vercel deployment:
+https://your-vercel-domain.vercel.app
+
+36. Accessibility
+Follow good accessibility practices:
+keyboard navigation
+visible focus states
+semantic HTML
+proper labels
+useful alt text
+sufficient color contrast
+reduced-motion support
+accessible dialogs
+accessible buttons
+
+37. Performance
+Prioritize:
+Server Components by default
+Client Components only where needed
+optimized images
+ImageKit transformations
+lazy loading
+minimal JavaScript
+proper loading states
+proper error states
+responsive design
+Do not optimize prematurely.
+Measure problems before introducing complexity.
+
+38. Security
+Treat security as a first-class requirement.
+Important areas:
+admin authentication
+server-side authorization
+secure password hashing
+protected admin routes
+input validation
+Zod validation
+secure ImageKit upload
+environment variables
+never expose secrets
+validate uploaded files
+safe database operations
+prevent unauthorized CRUD operations
+rate-limit authentication/sensitive operations where appropriate
+Never trust client input.
+
+39. File Upload Security
+Image upload rules:
+admin session required
+validate file type
+validate file size
+upload through server-side route or secure signed mechanism
+never expose ImageKit private key
+store ImageKit file ID and URL after successful upload
+allow replacement and deletion through admin
+
+40. Code Quality
+Code should be:
+readable
+maintainable
+modular
+consistent
+simple
+production-oriented
+Avoid:
+duplicated logic
+giant components
+giant API handlers
+magic values
+unnecessary abstractions
+dead code
+unused dependencies
+hardcoded catalog data
+hardcoded secrets
+Use environment variables for secrets/configuration.
+
+41. Deployment
+Target deployment:
+Vercel free plan
+MongoDB Atlas free plan
+ImageKit free plan
+Vercel-generated domain
+No custom domain is currently available.
+Use environment-based site URL.
+No analytics or error-tracking services are required initially.
+
+42. Implementation Workflow
+Work incrementally.
+Do NOT implement the entire project in one giant prompt.
+For each task:
+inspect existing implementation before changing it
+give one focused task only
+preserve existing functionality
+avoid rewriting unrelated code
+run relevant checks when available
+report what changed
+report blockers or assumptions

@@ -1,0 +1,462 @@
+{
+  "common": {
+    "appName": "Sokkariya Sweets"
+  },
+  "home": {
+    "metadataTitle": "Sokkariya Sweets — Handcrafted Egyptian Sweets",
+    "metadataDescription": "Discover Sokkariya Sweets: handcrafted cakes and treats, baked fresh with love and delivered to your door.",
+    "hero": {
+      "label": "Fresh sweets, made with love",
+      "overline": "Fresh Daily",
+      "title": "Handcrafted sweets, baked fresh with love",
+      "subtitle": "Savory and sweet treats made with the finest ingredients — order directly on WhatsApp and enjoy a taste of home.",
+      "ctaPrimary": "Browse Our Products"
+    },
+    "categories": {
+      "title": "Browse by Category"
+    },
+    "featured": {
+      "title": "Our Featured Sweets",
+      "viewAll": "View all products"
+    },
+    "brandStory": {
+      "title": "Our Story",
+      "paragraph1": "Sokkariya Sweets started in a small kitchen with a big dream: bringing the warmth of traditional Egyptian sweets to every home. Every batch is crafted by hand using recipes that have been perfected over generations.",
+      "paragraph2": "From classic treats to modern twists, we bake with the finest ingredients — real butter, fresh nuts, and a lot of love. Because the sweetest moments deserve the sweetest sweets.",
+      "illustrationLabel": "Pure sweetness, since day one"
+    },
+    "whyChooseUs": {
+      "title": "Why Choose Us",
+      "fresh": {
+        "title": "Fresh Ingredients",
+        "description": "We bake in small batches every day using real butter, premium nuts, and seasonal fruits."
+      },
+      "handcrafted": {
+        "title": "Handcrafted with Care",
+        "description": "Every sweet is shaped, decorated and finished by hand — never mass-produced."
+      },
+      "delivery": {
+        "title": "Easy Ordering",
+        "description": "Order in a minute on WhatsApp and get your sweets delivered while they are still fresh."
+      }
+    },
+    "social": {
+      "title": "Follow Us"
+    },
+    "contactCta": {
+      "title": "Craving something sweet?",
+      "subtitle": "Send us a message on WhatsApp or reach out — we would love to hear from you.",
+      "whatsappButton": "Order on WhatsApp",
+      "contactButton": "Contact Us"
+    }
+  },
+  "navigation": {
+    "home": "Home",
+    "products": "Products",
+    "about": "About",
+    "contact": "Contact",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "skipToContent": "Skip to content"
+  },
+  "lang": {
+    "label": "Language",
+    "switchTo": "Switch to Arabic",
+    "arabic": "العربية",
+    "english": "English"
+  },
+  "theme": {
+    "label": "Toggle dark mode"
+  },
+  "footer": {
+    "links": "Links",
+    "contact": "Contact",
+    "followUs": "Follow us",
+    "address": "Address",
+    "openingHours": "Opening hours",
+    "instagram": "Instagram",
+    "facebook": "Facebook",
+    "madeBy": "Made by Osama El-Gamal",
+    "rights": "© {name}. All rights reserved."
+  },
+  "storefront": {
+    "filters": {
+      "searchPlaceholder": "Search sweets...",
+      "allCategories": "All categories",
+      "clearFilters": "Clear filters"
+    }
+  },
+  "products": {
+    "metadataTitle": "Our Products — Sokkariya Sweets",
+    "metadataDescription": "Browse Sokkariya Sweets: handcrafted cakes and sweets, baked fresh with love and delivered to your door.",
+    "title": "Our Products",
+    "subtitle": "Handcrafted sweets, baked fresh with love.",
+    "emptyTitle": "No products yet",
+    "emptyDescription": "Our menu is being prepared. Check back soon.",
+    "unavailable": "Currently unavailable",
+    "price": "{price} EGP",
+    "fromPrice": "From {price} EGP",
+    "pagination": {
+      "label": "Pagination",
+      "previous": "Previous page",
+      "next": "Next page",
+      "pageInfo": "Page {page} of {totalPages}"
+    }
+  },
+  "productDetails": {
+    "breadcrumbs": "Breadcrumbs",
+    "optionsTitle": "Choose your options",
+    "addOnsLabel": "Add-ons",
+    "total": "Total",
+    "cta": "Order via WhatsApp",
+    "relatedTitle": "You may also like",
+    "currency": "EGP",
+    "greeting": "Hello",
+    "orderPrefix": "I would like to order:",
+    "sizeLabel": "Size:",
+    "extrasLabel": "Extras:",
+    "totalLabel": "Total:",
+    "unitType": {
+      "weight": "Select Weight",
+      "pieces": "Select Flavor",
+      "size": "Select Size"
+    }
+  },
+  "categoryPage": {
+    "breadcrumbs": "Breadcrumbs",
+    "breadcrumbHome": "Home",
+    "breadcrumbCategories": "Categories",
+    "emptyTitle": "No products in this category yet",
+    "emptyDescription": "We're restocking this category. Check back soon."
+  },
+  "about": {
+    "metadataTitle": "About Us — Sokkariya Sweets",
+    "metadataDescription": "Discover the story behind Sokkariya Sweets: handcrafted Egyptian sweets baked fresh with care, premium ingredients, and a lot of love.",
+    "hero": {
+      "title": "The Sweet Story Behind Sokkariya Sweets",
+      "subtitle": "A family shop built on tradition, quality, and the simple joy of sharing something delicious."
+    },
+    "content": {
+      "storyTitle": "Our Story",
+      "storyParagraph1": "Sokkariya Sweets began in a small home kitchen with a simple belief: great sweets should taste like they were made just for you. Every day we mix, shape, and bake in small batches, following recipes passed down through the family and refined over generations.",
+      "storyParagraph2": "What started as treats for neighbours and gatherings slowly grew into a beloved shop — yet our process never changed. Each piece is still finished by hand, still baked the morning it is sold, and still made with the same patience as the very first batch.",
+      "philosophyTitle": "Our Philosophy",
+      "philosophyParagraph": "We believe sweets are a language of kindness. Whether it is a celebration, a quiet afternoon, or a small thank-you, we craft every order to be as warm and memorable as the moment it accompanies.",
+      "qualityTitle": "Our Commitment to Quality",
+      "qualityParagraph": "Quality is non-negotiable. We use real butter, premium nuts, seasonal fruits, and nothing artificial — and we bake every day in small quantities so that what reaches you is always fresh, fragrant, and full of flavour.",
+      "illustrationLabel": "From our hands to your table"
+    },
+    "cta": {
+      "title": "Taste the difference yourself.",
+      "button": "Browse Our Products"
+    }
+  },
+  "contact": {
+    "metadataTitle": "Contact Us — Sokkariya Sweets",
+    "metadataDescription": "Reach out to Sokkariya Sweets by phone, WhatsApp, or visit our shop. We would love to hear from you.",
+    "message": "Shop message",
+    "hero": {
+      "title": "Let's Talk Sweets",
+      "subtitle": "Order, ask, or just say hello — we are one message away."
+    },
+    "info": {
+      "title": "Contact information",
+      "phone": "Phone",
+      "whatsapp": "WhatsApp",
+      "address": "Address",
+      "openingHours": "Opening Hours",
+      "followUs": "Follow Us",
+      "unavailable": "Contact information is currently unavailable."
+    },
+    "map": {
+      "title": "Find Us",
+      "getDirections": "Get Directions"
+    }
+  },
+  "admin": {
+    "metaTitle": "Admin — Sokkariya Sweets",
+    "panelTitle": "Admin Panel",
+    "logout": "Logout",
+    "loginTitle": "Admin Login",
+    "loginDescription": "Sign in to manage your shop.",
+    "registerTitle": "Create Admin Account",
+    "registerDescription": "One-time setup for the first admin account.",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "setupToken": "Setup Token",
+    "emailPlaceholder": "admin@example.com",
+    "passwordPlaceholder": "••••••••",
+    "confirmPasswordPlaceholder": "••••••••",
+    "setupTokenPlaceholder": "Enter the one-time setup token",
+    "loginButton": "Sign In",
+    "registerButton": "Create Account",
+    "loginError": "Invalid email or password.",
+    "registerError": "Registration failed. Please try again.",
+    "invalidToken": "The setup token is invalid or missing.",
+    "adminExists": "An admin account already exists. Registration is disabled.",
+    "goToLogin": "Already registered? Sign in",
+    "goToRegister": "First time here? Set up your account",
+    "validation": {
+      "required": "This field is required.",
+      "invalidEmail": "Please enter a valid email address.",
+      "invalidToken": "The setup token must be at least 16 characters long.",
+      "passwordMin": "Password must be at least 8 characters long.",
+      "passwordsMismatch": "Passwords do not match."
+    },
+    "toggleMenu": "Toggle navigation menu",
+    "nav": {
+      "dashboard": "Dashboard",
+      "categories": "Categories",
+      "products": "Products",
+      "settings": "Settings"
+    },
+    "dashboard": {
+      "metaTitle": "Dashboard — Sokkariya Sweets",
+      "welcomeTitle": "Welcome to the Admin Dashboard",
+      "welcomeDescription": "Manage your store from here — categories, products, and settings.",
+      "totalCategories": "Total Categories",
+      "totalProducts": "Total Products"
+    },
+    "categories": {
+      "metaTitle": "Categories — Sokkariya Sweets",
+      "title": "Categories",
+      "description": "Manage your store categories. Deactivation hides them from the storefront.",
+      "createNew": "Create Category",
+      "name": "Name",
+      "slug": "Slug",
+      "status": "Status",
+      "active": "Active",
+      "inactive": "Inactive",
+      "actions": "Actions",
+      "toggle": "Toggle active",
+      "delete": "Delete",
+      "edit": "Edit",
+      "confirmDelete": "Delete this category? This cannot be undone.",
+      "deleteErrorHasProducts": "Cannot delete category with active products. Move or deactivate its products first.",
+      "actionError": "Something went wrong. Please try again.",
+      "emptyTitle": "No categories yet",
+      "emptyDescription": "Create your first category to start organizing your products."
+    },
+    "categoryForm": {
+      "createTitle": "Create Category",
+      "editTitle": "Edit Category",
+      "sectionBasic": "Basic Info",
+      "sectionImage": "Image",
+      "sectionSettings": "Settings",
+      "labels": {
+        "nameAr": "Name (Arabic)",
+        "nameEn": "Name (English)",
+        "slug": "Slug",
+        "descriptionAr": "Description (Arabic)",
+        "descriptionEn": "Description (English)",
+        "imageUrl": "Image URL",
+        "isActive": "Active",
+        "sortOrder": "Sort Order"
+      },
+      "placeholders": {
+        "nameAr": "e.g. كيك العسل",
+        "nameEn": "e.g. Honey Cake",
+        "slug": "honey-cake",
+        "descriptionAr": "A short description in Arabic…",
+        "descriptionEn": "A short description in English…",
+        "imageUrl": "https://ik.imagekit.io/yourkit/category.jpg"
+      },
+      "submitCreate": "Create Category",
+      "submitUpdate": "Save Changes",
+      "cancel": "Cancel",
+      "successCreate": "Category created successfully.",
+      "successUpdate": "Category updated successfully.",
+      "errorSlugExists": "A category with this slug already exists.",
+      "errorNotFound": "Category not found.",
+      "errorGeneric": "Something went wrong. Please try again.",
+      "imageAltFallback": "Category image",
+      "validation": {
+        "required": "This field is required.",
+        "invalidSlug": "Use lowercase letters, numbers, and hyphens only.",
+        "invalidUrl": "Please enter a valid URL starting with http:// or https://.",
+        "minZero": "Must be zero or greater."
+      }
+    },
+    "products": {
+      "metaTitle": "Products — Sokkariya Sweets",
+      "title": "Products",
+      "description": "Manage your store products and their option groups.",
+      "createNew": "Create Product",
+      "searchPlaceholder": "Search by name…",
+      "filterCategory": "Category",
+      "allCategories": "All categories",
+      "clearFilters": "Clear filters",
+      "emptyTitle": "No products found",
+      "emptyDescription": "Try adjusting your search or filters, or create a new product.",
+      "columns": {
+        "image": "Image",
+        "name": "Name",
+        "category": "Category",
+        "price": "Price",
+        "status": "Status",
+        "actions": "Actions"
+      },
+      "active": "Active",
+      "inactive": "Inactive",
+      "available": "Available",
+      "soldOut": "Sold Out",
+      "featured": "Featured",
+      "toggleActive": "Toggle active",
+      "toggleFeatured": "Toggle featured",
+      "edit": "Edit",
+      "delete": "Delete",
+      "confirmDelete": "Delete this product? This cannot be undone.",
+      "actionError": "Something went wrong. Please try again.",
+      "currency": "EGP",
+      "pagination": {
+        "label": "Pagination",
+        "previous": "Previous page",
+        "next": "Next page",
+        "pageInfo": "Page {page} of {totalPages}"
+      }
+    },
+    "productForm": {
+      "createTitle": "Create Product",
+      "editTitle": "Edit Product",
+      "sectionBasic": "Basic Info",
+      "sectionPricing": "Pricing & Status",
+      "sectionImages": "Images",
+      "sectionOptions": "Measuring Unit & Add-ons",
+      "labels": {
+        "nameAr": "Name (Arabic)",
+        "nameEn": "Name (English)",
+        "slug": "Slug",
+        "descriptionAr": "Description (Arabic)",
+        "descriptionEn": "Description (English)",
+        "category": "Category",
+        "unitLabelAr": "Unit Label (Arabic)",
+        "unitLabelEn": "Unit Label (English)",
+        "price": "Base Price",
+        "oldPrice": "Old Price",
+        "isActive": "Active",
+        "isAvailable": "Available",
+        "isFeatured": "Featured",
+        "sortOrder": "Sort Order",
+        "imageUrl": "Image URL",
+        "isPrimary": "Primary image",
+        "required": "Required",
+        "measuringUnit": "Measuring Unit",
+        "selectUnitType": "Select a unit type",
+        "unitType": "Unit Type",
+        "unitTypeWeight": "Weight",
+        "unitTypePieces": "Pieces",
+        "unitTypeSize": "Size",
+        "unitOptionNameAr": "Unit Option Name (Arabic)",
+        "unitOptionNameEn": "Unit Option Name (English)",
+        "unitOptionPrice": "Unit Option Price",
+        "unitOptionActive": "Active",
+        "addOnSection": "Add-ons",
+        "addOnNameAr": "Add-on Name (Arabic)",
+        "addOnNameEn": "Add-on Name (English)",
+        "addOnPrice": "Add-on Price",
+        "addOnActive": "Active"
+      },
+      "placeholders": {
+        "nameAr": "e.g. كيك العسل",
+        "nameEn": "e.g. Honey Cake",
+        "slug": "honey-cake",
+        "descriptionAr": "A short description in Arabic…",
+        "descriptionEn": "A short description in English…",
+        "categorySelect": "Select a category",
+        "unitLabelAr": "e.g. كيلو",
+        "unitLabelEn": "e.g. kg",
+        "imageUrl": "https://ik.imagekit.io/yourkit/product.jpg",
+        "unitOptionNameAr": "e.g. وسط",
+        "unitOptionNameEn": "e.g. Medium",
+        "addOnNameAr": "e.g. مكسرات إضافية",
+        "addOnNameEn": "e.g. Extra nuts"
+      },
+      "addImage": "Add Image",
+      "removeImage": "Remove image",
+      "addUnitOption": "Add Unit Option",
+      "removeUnitOption": "Remove option",
+      "addAddOn": "Add Add-on",
+      "removeAddOn": "Remove add-on",
+      "measuringUnitHint": "Leave empty if the product is sold at a base price with no required selection.",
+      "noUnitsHint": "No add-ons yet. This product is sold without extras.",
+      "unitTypeHint": "Controls how the selection is presented to customers (weight, pieces, or size).",
+      "submitCreate": "Create Product",
+      "submitUpdate": "Save Changes",
+      "cancel": "Cancel",
+      "successCreate": "Product created successfully.",
+      "successUpdate": "Product updated successfully.",
+      "errorSlugExists": "A product with this slug already exists.",
+      "errorNotFound": "Product not found.",
+      "errorGeneric": "Something went wrong. Please try again.",
+      "imageAltFallback": "Product image",
+      "validation": {
+        "required": "This field is required.",
+        "invalidSlug": "Use lowercase letters, numbers, and hyphens only.",
+        "invalidCategory": "Please select a valid category.",
+        "minZero": "Must be zero or greater.",
+        "unitTypeRequired": "Select a unit type."
+      }
+    },
+    "settings": {
+      "pageTitle": "Site Settings"
+    },
+    "settingsForm": {
+      "sectionBrand": "Brand Identity",
+      "sectionContact": "Contact & Social",
+      "sectionLocation": "Location & Hours",
+      "sectionMessages": "Messages",
+      "labels": {
+        "brandNameAr": "Brand Name (Arabic)",
+        "brandNameEn": "Brand Name (English)",
+        "phone": "Phone",
+        "whatsapp": "WhatsApp",
+        "instagram": "Instagram",
+        "facebook": "Facebook",
+        "addressAr": "Address (Arabic)",
+        "addressEn": "Address (English)",
+        "openingHoursAr": "Opening Hours (Arabic)",
+        "openingHoursEn": "Opening Hours (English)",
+        "latitude": "Latitude",
+        "longitude": "Longitude",
+        "contactMessageAr": "Contact Message (Arabic)",
+        "contactMessageEn": "Contact Message (English)"
+      },
+      "placeholders": {
+        "brandNameAr": "مثال: سوكارية للحلويات",
+        "brandNameEn": "e.g. Sokkariya Sweets",
+        "phone": "+123 456 7890",
+        "whatsapp": "+123 456 7890",
+        "instagram": "https://instagram.com/youraccount",
+        "facebook": "https://facebook.com/youraccount",
+        "addressAr": "شارع التحلية، الرياض",
+        "addressEn": "123 Tahlia St, Riyadh",
+        "openingHoursAr": "السبت - الخميس: 9 صباحاً - 11 مساءً",
+        "openingHoursEn": "Sat–Thu: 9 AM – 11 PM",
+        "latitude": "e.g. 30.0444",
+        "longitude": "e.g. 31.2357",
+        "contactMessageAr": "رسالة ترحيبية للزبائن",
+        "contactMessageEn": "A welcome message for customers"
+      },
+      "coordinatesHint": "Get coordinates from Google Maps or openstreetmap.org (right-click the location).",
+      "submit": "Save Settings",
+      "successUpdate": "Settings saved successfully.",
+      "errorGeneric": "Something went wrong. Please try again.",
+      "logoAltFallback": "Site logo",
+      "faviconAltFallback": "Site favicon",
+      "validation": {
+        "invalidUrl": "Please enter a valid URL starting with http:// or https://.",
+        "invalidCoordinate": "Please enter a valid coordinate in range."
+      }
+    },
+    "imageUpload": {
+      "uploadPrompt": "Click to upload or drag and drop",
+      "uploading": "Uploading…",
+      "remove": "Remove image",
+      "replace": "Replace image",
+      "errorInvalidType": "Only image files are allowed",
+      "errorTooLarge": "File size must be less than 5MB",
+      "errorUploadFailed": "Failed to upload image"
+    }
+  }
+}
