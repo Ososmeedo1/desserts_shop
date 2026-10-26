@@ -3,6 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "overrides": {
+  "imagekit": {
+    "uuid": "^11.1.1"
+  }
+},
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -20,7 +25,7 @@
     "imagekit": "^6.0.0",
     "lucide-react": "^1.41.0",
     "mongoose": "^9.9.5",
-    "next": "16.3.4",
+    "next": "^16.4.3",
     "next-auth": "^4.24.15",
     "next-intl": "^4.14.2",
     "react": "19.2.8",
