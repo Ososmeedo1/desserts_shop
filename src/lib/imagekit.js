@@ -5,7 +5,7 @@ const privateKey = process.env.IMAGEKIT_PRIVATE_KEY;
 const urlEndpoint = process.env.IMAGEKIT_ENDPOINT;
 
 export const imagekitConfigured = Boolean(publicKey && privateKey && urlEndpoint);
-
+  
 let imagekit = null;
 
 if (imagekitConfigured) {
